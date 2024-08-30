@@ -1,6 +1,6 @@
-package com.ws.budget.bee.controller.creditcard;
+package com.ws.budget.bee.domain.creditcard;
 
-import com.ws.budget.bee.controller.user.User;
+import com.ws.budget.bee.domain.user.User;
 import jakarta.persistence.*;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;

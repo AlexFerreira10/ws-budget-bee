@@ -1,4 +1,4 @@
-package com.ws.budget.bee.controller.subscription;
+package com.ws.budget.bee.domain.subscription;
 
 import jakarta.persistence.*;
 import lombok.EqualsAndHashCode;

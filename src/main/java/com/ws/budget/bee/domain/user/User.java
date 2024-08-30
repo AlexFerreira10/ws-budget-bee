@@ -1,6 +1,6 @@
-package com.ws.budget.bee.controller.user;
+package com.ws.budget.bee.domain.user;
 
-import com.ws.budget.bee.controller.subscription.Subscription;
+import com.ws.budget.bee.domain.subscription.Subscription;
 import jakarta.persistence.*;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
