@@ -35,7 +35,7 @@ public class User {
     private String phone;
 
     @Column(name= "bb_user_dt_birth")
-    private LocalDate bith;
+    private LocalDate birth;
 
     @Column(name= "bb_user_dt_subscription")
     private LocalDateTime dtSubscription;
@@ -47,13 +47,13 @@ public class User {
     @JoinColumn(name = "bb_subscriptions_id")
     private Subscription subscriptions;
 
-    public User(Long id, String name, String email, String cpf, String phone, LocalDate bith, LocalDateTime dtSubscription, LocalDateTime dtExpiration, Subscription subscriptions) {
+    public User(Long id, String name, String email, String cpf, String phone, LocalDate birth, LocalDateTime dtSubscription, LocalDateTime dtExpiration, Subscription subscriptions) {
         this.id = id;
         this.name = name;
         this.email = email;
         this.cpf = cpf;
         this.phone = phone;
-        this.bith = bith;
+        this.birth = birth;
         this.dtSubscription = dtSubscription;
         this.dtExpiration = dtExpiration;
         this.subscriptions = subscriptions;
@@ -67,10 +67,28 @@ public class User {
                 ", email='" + email + '\'' +
                 ", cpf='" + cpf + '\'' +
                 ", phone='" + phone + '\'' +
-                ", bith=" + bith +
+                ", bith=" + birth +
                 ", dtSubscription=" + dtSubscription +
                 ", dtExpiration=" + dtExpiration +
                 ", subscriptions=" + subscriptions +
                 '}';
+    }
+
+    public void update(User user) {
+        if(!this.name.equals(user.getName())) {
+            this.name = user.getName();
+        }
+        if(!this.email.equals(user.getEmail())) {
+            this.email = user.getEmail();
+        }
+        if(!this.cpf.equals(user.getCpf())) {
+            this.cpf = user.getCpf();
+        }
+        if(!this.phone.equals(user.getPhone())) {
+            this.phone = user.getPhone();
+        }
+        if(!this.birth.equals(user.getBirth())) {
+            this.birth = user.getBirth();
+        }
     }
 }

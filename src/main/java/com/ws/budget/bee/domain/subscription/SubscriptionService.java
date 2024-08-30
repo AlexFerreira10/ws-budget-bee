@@ -13,4 +13,11 @@ public class SubscriptionService {
     public List<Subscription> findAll() {
         return subscriptionRepository.findAll();
     }
+
+    public Subscription getSubscription(Long id) {
+        if(!subscriptionRepository.existsById(id)) {
+            throw new RuntimeException("Subscription with id " + id + " not found!");
+        }
+        return subscriptionRepository.getReferenceById(id);
+    }
 }
